@@ -15,5 +15,3 @@ build
 .cache
 
 .medusa
-
-package-lock.json
