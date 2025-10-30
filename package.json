@@ -1,0 +1,46 @@
+{
+  "name": "tochka-sdk",
+  "version": "1.0.1",
+  "description": "Tochka Bank Typescript SDK",
+  "author": "Nikita Mishnev",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [
+    "tochka",
+    "bank",
+    "api",
+    "sdk",
+    "typescript",
+    "payment",
+    "acquiring",
+    "sbp",
+    "banking"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatheroctber/tochka-sdk.git"
+  },
+  "homepage": "https://github.com/fatheroctber/tochka-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/fatheroctber/tochka-sdk/issues"
+  },
+  "scripts": {
+    "generateTochkaApi": "swagger-typescript-api -p ./spec/tochka-api-spec.json -o ./src/tochka-api -n tochka-api.ts",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "jose": "^6.1.0",
+    "ts-jose": "^6.0.11"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "swagger-typescript-api": "^13.2.16",
+    "jest": "^30.2.0",
+    "@types/jest": "^30.0.0"
+  }
+}
